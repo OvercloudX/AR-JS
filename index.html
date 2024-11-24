@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AR.js Demo</title>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://cdn.rawgit.com/jeromeetienne/ar.js/2.2.1/aframe/build/aframe-ar.min.js"></script>
+</head>
+<body style="margin: 0; overflow: hidden;">
+  <!-- AR Scene -->
+  <a-scene embedded arjs>
+    <!-- Marker Definition -->
+    <a-marker preset="custom" type="pattern" url="assets/pattern-marker.patt">
+      <!-- 3D Model -->
+      <a-entity gltf-model="assets/Old_House.glb" scale="0.1 0.1 0.1" position="0 0 0"></a-entity>
+    </a-marker>
+    
+    <!-- Camera -->
+    <a-entity camera></a-entity>
+  </a-scene>
+</body>
+</html>
